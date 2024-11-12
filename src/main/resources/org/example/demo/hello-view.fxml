@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0"
+            prefWidth="459.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.demo.GameController">
+    <GridPane fx:id="RectPane" alignment="center" layoutX="55.0" layoutY="55.0" xmlns:fx="http://javafx.com/fxml/1"
+              xmlns="http://javafx.com/javafx">
+        <!-- Первый ряд -->
+        <StackPane id="0,0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,2" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="6" GridPane.rowIndex="1">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <!-- Второй ряд -->
+        <StackPane id="0,0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,1" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,2" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="6" GridPane.rowIndex="2">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <!-- Третий ряд -->
+        <StackPane id="0,0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,2" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="6" GridPane.rowIndex="3">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <!-- 4  -->
+        <StackPane id="0,0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,1" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,2" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="5" GridPane.rowIndex="4">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="6" GridPane.rowIndex="4">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <!-- 4  -->
+
+        <StackPane id="0,0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,1" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,2" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="4" GridPane.rowIndex="5">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="5" GridPane.rowIndex="5">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="6" GridPane.rowIndex="5">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,1" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane id="0,2" GridPane.columnIndex="3" GridPane.rowIndex="6">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="4" GridPane.rowIndex="6">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="5" GridPane.rowIndex="6">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+
+        <StackPane GridPane.columnIndex="6" GridPane.rowIndex="6">
+            <Rectangle fill="whitesmoke" height="80" width="80" StackPane.alignment="CENTER"/>
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="TOP_CENTER"/> <!-- Верхняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_LEFT"/> <!-- Левая сторона -->
+            <Rectangle fill="grey" height="4" onMouseClicked="#onRectangleClick" width="80"
+                       StackPane.alignment="BOTTOM_CENTER"/> <!-- Нижняя сторона -->
+            <Rectangle fill="grey" height="80" onMouseClicked="#onRectangleClick" width="4"
+                       StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
+        </StackPane>
+    </GridPane>
+    <Label fx:id="labelPlayerMove" text = "" layoutX="15.0" layoutY="15.0" prefHeight="25.0" prefWidth="240.0">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+    <Label fx:id="labelPlayerSymbol" text = "" alignment="CENTER_RIGHT" layoutX="255.0" layoutY="15.0" prefHeight="25.0"
+           prefWidth="160.0">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+</AnchorPane>
