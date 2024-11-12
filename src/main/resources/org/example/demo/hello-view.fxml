@@ -448,6 +448,20 @@
                        StackPane.alignment="CENTER_RIGHT"/> <!-- Правая сторона -->
         </StackPane>
     </GridPane>
+    <VBox layoutX="15.0" layoutY="550.0" prefHeight="60.0" prefWidth="315.0">
+        <children>
+            <Label fx:id="RScore" text = "RED score: 0" layoutX="15.0" layoutY="15.0">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Label>
+            <Label fx:id="BScore" text = "BLUE score: 0" alignment="CENTER_RIGHT" layoutX="255.0" layoutY="15.0">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Label>
+        </children>
+    </VBox>
     <Label fx:id="labelPlayerMove" text = "" layoutX="15.0" layoutY="15.0" prefHeight="25.0" prefWidth="240.0">
         <font>
             <Font size="20.0"/>

@@ -62,7 +62,23 @@ public class GameServer {
                             System.out.println("Received: " + moveID);
                             String message = (String) in.readObject();
                             System.out.println("Received: " + message);
-                            sendToAllClients(message, moveID);
+                            sendToAllClients(message);
+                        }
+                        case "CHANGE" -> {
+                            String message = (String) in.readObject();
+                            System.out.println("Received: " + message);
+                            if(Objects.equals(message, "RED")) {
+                                message = "BLUE";
+                            }
+                            else {
+                                message = "RED";
+                            }
+                            sendToAllClients(message);
+                        }
+                        case "SCORE" -> {
+                            String message = (String) in.readObject();
+                            System.out.println("Received: " + message);
+                            sendToAllClients(message);
                         }
                     }
                 }
@@ -71,7 +87,7 @@ public class GameServer {
             }
         }
 
-        private void sendToAllClients(String message, String moveID) {
+        private void sendToAllClients(String message) {
             for (ObjectOutputStream clientOut : clientStreams) {
                 try {
                     clientOut.writeObject(message);
