@@ -2,7 +2,6 @@ package org.example.demo;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -10,7 +9,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
 import java.util.Objects;
@@ -22,11 +20,11 @@ import java.net.Socket;
 
 public class GameController {
     @FXML
+    public Label WinL;
+    @FXML
     private GridPane RectPane;
-
     @FXML
     private Label labelPlayerSymbol;
-
     @FXML
     private Label labelPlayerMove;
     @FXML
@@ -42,6 +40,7 @@ public class GameController {
     private Integer id;
     private Integer BlueScore = 0;
     private Integer RedScore = 0;
+    private Boolean winnerPr = false;
 
     @FXML
     public void initialize() {
@@ -49,28 +48,24 @@ public class GameController {
         id = random.nextInt(100);
         System.out.println("ID: " + id);
         try {
-            socket = new Socket("localhost", 12345);
+            socket = new Socket("localhost", 8080);
             out = new ObjectOutputStream(socket.getOutputStream());
             in = new ObjectInputStream(socket.getInputStream());
 
-            System.out.println(socket.getRemoteSocketAddress().toString());
             out.writeObject("ID");
             out.writeObject(Integer.toString(id));
-            out.flush();
 
-            // Запускаем поток для прослушивания обновлений от сервера
             new Thread(this::listenForUpdates).start();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
 
     private void listenForUpdates() {
         try {
-            while (true) {
+            while (!socket.isClosed()) {
                 String message = (String) in.readObject();
                 if (message.startsWith("teamMessage:")) {
-                    // Обработка команды от сервера (установка текста Label)
                     String teamMessage = message.split(":", 2)[1];
                     Platform.runLater(() -> labelPlayerSymbol.setText(teamMessage));
                     if(Objects.equals(teamMessage, "Your team: RED")) {
@@ -96,6 +91,11 @@ public class GameController {
                     BlueScore++;
                     Platform.runLater(() -> BScore.setText("BLUE Score: " + BlueScore));
                     WinCondition("BLUE", BlueScore);
+                } else if(message.startsWith("WINS")) {
+                    winnerPr = true;
+                    System.out.println(message);
+                    Platform.runLater(() -> WinL.setText(message));
+                    closeConnection();
                 }
                 else {
                     // Обработка других сообщений, например, изменения цвета прямоугольника
@@ -103,13 +103,13 @@ public class GameController {
                 }
             }
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
 
     @FXML
     private void onRectangleClick(MouseEvent event) {
-        if(Objects.equals(active_player, local_player)) {
+        if(Objects.equals(active_player, local_player) && !winnerPr) {
             if (event.getSource() instanceof Rectangle rectangle) {
 
                 Integer row = GridPane.getRowIndex(rectangle.getParent());
@@ -146,7 +146,7 @@ public class GameController {
                             centerRectangle.setFill(getColorFromPlayer(local_player, true));
                             sendColorUpdate(row, column, getColorFromPlayer(local_player, true),
                                             StackPane.getAlignment(centerRectangle));
-                            if(local_player == "RED") {
+                            if(Objects.equals(local_player, "RED")) {
                                 sendMessage("SCORE", "RED SCORED");
                             } else {
                                 sendMessage("SCORE", "BLUE SCORED");
@@ -166,17 +166,18 @@ public class GameController {
             out.writeObject(message);
         }
         catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
 
     private void WinCondition(String side, Integer score) {
-        if(score >= 5) {
+        if(score >= 1) {
+            String win_message = "WINS " + side;
             try {
                 out.writeObject("WIN");
-                out.writeObject(side);
+                out.writeObject(win_message);
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println(e);
             }
         }
     }
@@ -187,9 +188,8 @@ public class GameController {
             out.writeObject("MOVE");
             out.writeObject(Integer.toString(id));
             out.writeObject(message);
-            out.flush();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
 
@@ -234,6 +234,17 @@ public class GameController {
                 return Color.DARKBLUE;
             }
             return Color.BLUE;
+        }
+    }
+
+    private void closeConnection() {
+        try {
+            in.close();
+            out.close();
+            socket.close();
+        }
+        catch (IOException i) {
+            System.out.println(i);
         }
     }
 }

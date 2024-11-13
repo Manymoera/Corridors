@@ -8,11 +8,10 @@ import java.net.Socket;
 import java.util.*;
 
 public class GameServer {
-    private static final int PORT = 12345;
+    private static final int PORT = 8080;
     private static List<ObjectOutputStream> clientStreams = new ArrayList<>();
     private static List<String> playerIds = new ArrayList<>();
     private static ServerSocket serverSocket;
-    private Map<String, ObjectOutputStream> players = new HashMap<>();
 
     public static void main(String[] args) {
         try {
@@ -23,14 +22,20 @@ public class GameServer {
                 ObjectOutputStream out = new ObjectOutputStream(clientSocket.getOutputStream());
                 clientStreams.add(out);
 
-                // Отправляем сообщение о команде новому клиенту
                 String teamMessage = clientStreams.size() == 1 ? "Your team: RED" : "Your team: BLUE";
                 out.writeObject("teamMessage:" + teamMessage);
-                out.flush();
 
-                // Запускаем поток для обработки клиента
                 new Thread(new ClientHandler(clientSocket, out)).start();
             }
+        } catch (IOException e) {
+            closeServer();
+            System.out.println("Client disconnected");
+        }
+    }
+
+    private static void closeServer() {
+        try {
+            serverSocket.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -47,7 +52,8 @@ public class GameServer {
 
         @Override
         public void run() {
-            try (ObjectInputStream in = new ObjectInputStream(clientSocket.getInputStream())) {
+            try {
+                ObjectInputStream in = new ObjectInputStream(clientSocket.getInputStream());
                 while (!serverSocket.isClosed()) {
                     String tag = (String) in.readObject();
                     System.out.println("Received: " + tag);
@@ -80,10 +86,15 @@ public class GameServer {
                             System.out.println("Received: " + message);
                             sendToAllClients(message);
                         }
+                        case "WIN" -> {
+                            String message = (String) in.readObject();
+                            sendToAllClients(message);
+                        }
                     }
                 }
             } catch (IOException | ClassNotFoundException e) {
-                e.printStackTrace();
+                closeConnection();
+                System.out.println("Client disconnected");
             }
         }
 
@@ -91,11 +102,20 @@ public class GameServer {
             for (ObjectOutputStream clientOut : clientStreams) {
                 try {
                     clientOut.writeObject(message);
-                    clientOut.flush();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
+        }
+
+        private void closeConnection() {
+            try {
+                out.close();
+                clientSocket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 }

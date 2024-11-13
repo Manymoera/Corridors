@@ -460,6 +460,11 @@
                     <Font size="20.0"/>
                 </font>
             </Label>
+            <Label fx:id="WinL" text = "" alignment="CENTER_RIGHT" layoutX="255.0" layoutY="15.0">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Label>
         </children>
     </VBox>
     <Label fx:id="labelPlayerMove" text = "" layoutX="15.0" layoutY="15.0" prefHeight="25.0" prefWidth="240.0">
