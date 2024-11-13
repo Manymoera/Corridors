@@ -22,7 +22,7 @@ public class GameServer {
                 ObjectOutputStream out = new ObjectOutputStream(clientSocket.getOutputStream());
                 clientStreams.add(out);
 
-                String teamMessage = clientStreams.size() == 1 ? "Your team: RED" : "Your team: BLUE";
+                String teamMessage = (clientStreams.size() % 2 == 1) ? "Your team: RED" : "Your team: BLUE";
                 out.writeObject("teamMessage:" + teamMessage);
 
                 new Thread(new ClientHandler(clientSocket, out)).start();
@@ -30,6 +30,7 @@ public class GameServer {
         } catch (IOException e) {
             closeServer();
             System.out.println("Client disconnected");
+
         }
     }
 
